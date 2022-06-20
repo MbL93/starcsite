@@ -3,12 +3,14 @@ import Page from "../components/Page"
 import { Container } from "../styles/PageLayout"
 import { Headline } from "../styles/Typography"
 
-export default function Home() {
+const About = () => {
   return (
     <Page>
       <Container>
-        <Headline>Hi!</Headline>
+        <Headline>Hi from About!</Headline>
       </Container>
     </Page>
   )
 }
+
+export default About

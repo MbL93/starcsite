@@ -3,12 +3,14 @@ import Page from "../components/Page"
 import { Container } from "../styles/PageLayout"
 import { Headline } from "../styles/Typography"
 
-export default function Home() {
+const Portfolio = () => {
   return (
     <Page>
       <Container>
-        <Headline>Hi!</Headline>
+        <Headline>Hi from Portfolio!</Headline>
       </Container>
     </Page>
   )
 }
+
+export default Portfolio
