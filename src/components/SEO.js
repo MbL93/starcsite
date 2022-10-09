@@ -1,7 +1,7 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 
-const SEO = () => {
+const Seo = () => {
   const metaDescription = "STARC Photography"
   return (
     <Helmet
@@ -12,4 +12,4 @@ const SEO = () => {
   )
 }
 
-export default SEO
+export default Seo

@@ -4,7 +4,9 @@
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 const config = require("./config")
-
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 module.exports = {
   /* Your site config here */
   siteMetadata: {
@@ -16,6 +18,14 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        google: {
+          families: ["Playfair Display", "Serif"],
+        },
+      },
+    },
     {
       resolve: `gatsby-plugin-webfonts`,
       options: {
@@ -31,6 +41,14 @@ module.exports = {
             },
           ],
         },
+      },
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `bg9ouluidetf`,
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: process.env.CONTENTFUL_API_KEY,
       },
     },
   ],

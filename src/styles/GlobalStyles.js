@@ -3,6 +3,7 @@ import { createGlobalStyle } from "styled-components"
 const GlobalStyles = createGlobalStyle`
   * {
     box-sizing: border-box;
+    
     word-wrap: break-word;
   }
 
@@ -16,7 +17,7 @@ const GlobalStyles = createGlobalStyle`
     line-height: 1.5;
     font-style: normal;
     font-stretch: normal;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Fairplay Display', serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     letter-spacing: normal;

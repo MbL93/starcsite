@@ -1,14 +1,17 @@
 import React from "react"
 import Page from "../components/Page"
-import { Container } from "../styles/PageLayout"
-import { Headline } from "../styles/Typography"
+import Introduction from "../components/Introduction"
+import StoryGallery from "../components/storyGallery"
 
-export default function Home() {
+const Home = () => {
   return (
-    <Page>
-      <Container>
-        <Headline>Hi!</Headline>
-      </Container>
-    </Page>
+    <>
+      <Page>
+        <Introduction />
+        <StoryGallery />
+      </Page>
+    </>
   )
 }
+
+export default Home
