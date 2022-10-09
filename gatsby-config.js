@@ -8,6 +8,7 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 module.exports = {
+  pathPrefix: "/starcsite",
   /* Your site config here */
   siteMetadata: {
     title: config.siteTitle,
