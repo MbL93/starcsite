@@ -6,7 +6,6 @@ import GalleryComp from "../components/GalleryComp"
 const Portfolio = () => {
   return (
     <Page>
-      <Headline>Hi from Portfolio!</Headline>
       <GalleryComp />
     </Page>
   )
