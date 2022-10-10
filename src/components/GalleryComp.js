@@ -11,10 +11,17 @@ const GalleryComp = () => {
   console.log(images)
   // `images` is an array of objects with `thumb` and `full`
   return (
-    <GalleryContainer>
+    <GalleryContainer
+      style={{
+        display: "block",
+      }}
+    >
       <Gallery
+        style={{
+          display: "block",
+        }}
         images={images}
-        colWidth={400}
+        colWidth={33}
         rowMargin={50}
         title="Schmandalo"
       />
