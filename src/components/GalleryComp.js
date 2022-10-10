@@ -19,7 +19,7 @@ const GalleryComp = () => {
 
 const pageQuery = graphql`
   {
-    allContentfulGalleryImages {
+    allContentfulGalleryImages(sort: { fields: galleryImage___title }) {
       nodes {
         galleryImage {
           thumb: gatsbyImageData(
@@ -28,6 +28,7 @@ const pageQuery = graphql`
             placeholder: BLURRED
           )
           full: gatsbyImageData(layout: FULL_WIDTH)
+          title
         }
       }
     }
