@@ -18,7 +18,7 @@ const GalleryComp = () => {
         colWidth={33}
         rowMargin={0}
         gutter={"2px"}
-        title="Schmandalo"
+        title="Schmandalos"
       />
     </GalleryContainer>
   )
