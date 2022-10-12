@@ -12,7 +12,14 @@ const GalleryComp = () => {
   // `images` is an array of objects with `thumb` and `full`
   return (
     <GalleryContainer>
-      <Gallery images={images} colWidth={33} rowMargin={0} title="Schmandalo" />
+      <Gallery
+        images={images}
+        mdColWidth={33}
+        colWidth={33}
+        rowMargin={0}
+        gutter={"2px"}
+        title="Schmandalo"
+      />
     </GalleryContainer>
   )
 }
