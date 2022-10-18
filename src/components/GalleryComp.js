@@ -14,11 +14,9 @@ const GalleryComp = () => {
     <GalleryContainer>
       <Gallery
         images={images}
-        mdColWidth={33}
         colWidth={33}
-        rowMargin={0}
-        gutter={"2px"}
-        title="Schmandalos"
+        rowMargin={33}
+        title="Schmandalo"
       />
     </GalleryContainer>
   )
@@ -26,7 +24,7 @@ const GalleryComp = () => {
 
 const pageQuery = graphql`
   {
-    allContentfulGalleryImages(sort: { fields: galleryImage___title }) {
+    allContentfulGalleryImages(sort: { fields: date, order: DESC }) {
       nodes {
         galleryImage {
           thumb: gatsbyImageData(
@@ -35,7 +33,6 @@ const pageQuery = graphql`
             placeholder: BLURRED
           )
           full: gatsbyImageData(layout: FULL_WIDTH)
-          title
         }
       }
     }
