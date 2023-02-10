@@ -59,12 +59,15 @@ const StoryGallery = () => {
                       <GatsbyImage
                         image={pathToImage}
                         alt={title}
-                        style={{ overflow: "hidden", height: "85%" }}
+                        style={{
+                          overflow: "hidden",
+                          height: "85%",
+                        }}
                       />
                       <h5 style={{ "text-align": "center" }}>{title}</h5>
                     </Link>
                   </StoryGalleryItem>
-                  <StoryGalleryItem>
+                  {/* <StoryGalleryItem>
                     <Link
                       key={id}
                       to={`/${slug}`}
@@ -94,7 +97,7 @@ const StoryGallery = () => {
                       />
                       <h5 style={{ "text-align": "center" }}>{title}</h5>
                     </Link>
-                  </StoryGalleryItem>
+                  </StoryGalleryItem> */}
                 </>
               )
             })}
