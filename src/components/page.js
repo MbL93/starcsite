@@ -7,6 +7,7 @@ import Seo from "./Seo"
 import ImageHeader from "./ImageHeader"
 import useIsInViewport from "../hooks/useIsInViewport"
 import { Container } from "../styles/PageLayout"
+import { ImageHeaderWrapper } from "../styles/ImageHeaderLayout"
 import {
   Link,
   Button,
@@ -18,29 +19,40 @@ import {
 } from "react-scroll"
 
 function executeScroll() {
-  console.log("h23i")
   scroll.scrollMore(100)
 }
 
-const Page = ({ children }) => {
+const Page = ({ children, visibleNavbar, visibleHeader}) => {
   const imageHeaderRef = useRef(null)
   const containerStartRef = useRef(null)
-
-  // containerStartRef.current.scrollIntoView()
-
   const isInViewport1 = useIsInViewport(imageHeaderRef)
-  console.log("isInViewport1: ", isInViewport1)
+  // containerStartRef.current.scrollIntoView()
+  // if (visibleHeader){
+  //   const isInViewport1 = useIsInViewport(imageHeaderRef)
+    
+  // if(visibleNavbar){
+  //   const navbarIsVisible = !isInViewport1
+  // }
+  
   const navbarIsVisible = !isInViewport1
+  
 
   return (
     <>
       <Seo />
       <GlobalStyles />
-      <Header navbarIsVisible={navbarIsVisible} />
+      
+      {visibleNavbar ? (
+        <Header navbarIsVisible={navbarIsVisible} />
+      ) : (
+        null
+      )}
+      
       <PageLayout>
-        <div ref={imageHeaderRef} onWheel={executeScroll}>
-          <ImageHeader />
-        </div>
+        <ImageHeaderWrapper ref={imageHeaderRef} onWheel={executeScroll} isVisible={visibleHeader}>
+        <ImageHeader />
+      </ImageHeaderWrapper>
+        
         <Element id="myScrollToElement" name="myScrollToElement">
           <Container
             column

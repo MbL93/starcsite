@@ -5,7 +5,7 @@ import GalleryComp from "../components/GalleryComp"
 
 const Portfolio = () => {
   return (
-    <Page>
+    <Page visibleHeader={false} visibleNavbar={true}>
       <Headline>Hi from Portfolio!</Headline>
       <GalleryComp />
     </Page>

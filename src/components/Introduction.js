@@ -18,7 +18,7 @@ export default function Introduction() {
       <div style={{ width: "100%" }}>
         <Divider></Divider>
       </div>
-      <div style={{ padding: "60px", "padding-top": "19px" }}>
+      <div style={{ padding: "60px", "paddingTop": "19px" }}>
         <Headline>ÜBER UNS</Headline>
         <Divider></Divider>
       </div>
@@ -30,7 +30,7 @@ export default function Introduction() {
           justifyContent: "space-between",
         }}
       >
-        <div id="item1" style={{ flex: "0 0 48%", alignSelf: "flex-start" }}>
+        <div id="item1" style={{ flex: "0 0 48%", alignSelf: "flexStart" }}>
           <StaticImage
             src="../assets/images/header.jpg"
             alt="header"

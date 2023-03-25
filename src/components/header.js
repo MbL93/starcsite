@@ -47,7 +47,7 @@ const Header = ({ navbarIsVisible }) => {
         </HeaderDiv>
       </StyledHeader>
     )
-  }
+  } 
 }
 
 export default Header

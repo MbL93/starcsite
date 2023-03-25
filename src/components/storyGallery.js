@@ -30,7 +30,7 @@ const StoryGallery = () => {
       <div style={{ width: "100%" }}>
         <Divider></Divider>
       </div>
-      <div style={{ padding: "60px", "padding-top": "19px" }}>
+      <div style={{ padding: "60px", paddingTop: "19px" }}>
         <Headline>ERINNERUNGEN</Headline>
         <Divider></Divider>
       </div>
@@ -64,7 +64,7 @@ const StoryGallery = () => {
                           height: "85%",
                         }}
                       />
-                      <h5 style={{ "text-align": "center" }}>{title}</h5>
+                      <h5 style={{ textAlign: "center" }}>{title}</h5>
                     </Link>
                   </StoryGalleryItem>
                   {/* <StoryGalleryItem>
