@@ -4,7 +4,7 @@ import { Headline } from "../styles/Typography"
 
 const Stories = () => {
   return (
-    <Page>
+    <Page headerIsVisible={true}>
       <Headline>Hi from Stories!</Headline>
     </Page>
   )

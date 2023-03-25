@@ -4,7 +4,7 @@ import { Headline } from "../styles/Typography"
 
 const Contact = () => {
   return (
-    <Page>
+    <Page headerIsVisible={true}>
       <Headline>Hi from Contact!</Headline>
     </Page>
   )
