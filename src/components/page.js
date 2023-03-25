@@ -22,25 +22,33 @@ function executeScroll() {
   scroll.scrollMore(100)
 }
 
-const Page = ({ children }) => {
+const Page = ({ children, headerIsVisible }) => {
   const imageHeaderRef = useRef(null)
   const containerStartRef = useRef(null)
-
-  // containerStartRef.current.scrollIntoView()
 
   const isInViewport1 = useIsInViewport(imageHeaderRef)
   console.log("isInViewport1: ", isInViewport1)
   const navbarIsVisible = !isInViewport1
-
+  console.log(headerIsVisible)
   return (
     <>
       <Seo />
       <GlobalStyles />
       <Header navbarIsVisible={navbarIsVisible} />
       <PageLayout>
-        <div ref={imageHeaderRef} onWheel={executeScroll}>
-          <ImageHeader />
-        </div>
+        {headerIsVisible ? (
+          <div ref={imageHeaderRef} onWheel={executeScroll}>
+            <ImageHeader />
+          </div>
+        ) : (
+          <div
+            style={{ display: "none" }}
+            ref={imageHeaderRef}
+            onWheel={executeScroll}
+          >
+            <ImageHeader />
+          </div>
+        )}
         <Element id="myScrollToElement" name="myScrollToElement">
           <Container
             column
@@ -51,7 +59,6 @@ const Page = ({ children }) => {
           </Container>
         </Element>
       </PageLayout>
-
       <Footer />
     </>
   )
