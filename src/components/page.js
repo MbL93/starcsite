@@ -22,7 +22,7 @@ function executeScroll() {
   scroll.scrollMore(100)
 }
 
-const Page = ({ children, headerIsVisible }) => {
+const Page = ({ children, headerIsVisible, visibleNavbar }) => {
   const imageHeaderRef = useRef(null)
   const containerStartRef = useRef(null)
 
@@ -51,7 +51,7 @@ const Page = ({ children, headerIsVisible }) => {
       <PageLayout>
         {headerIsVisible ? (
           <div ref={imageHeaderRef} onWheel={executeScroll}>
-            <ImageHeader />
+            <ImageHeader imageTitle={"Wir gestalten dir deine schönste Erinnerung - auf ewig!"}/>
           </div>
         ) : (
           <div

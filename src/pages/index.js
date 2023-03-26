@@ -6,7 +6,7 @@ import StoryGallery from "../components/storyGallery"
 const Home = () => {
   return (
     <>
-      <Page headerIsVisible={true}>
+      <Page headerIsVisible={true} visibleNavbar={true}>
         <Introduction />
         <StoryGallery />
       </Page>

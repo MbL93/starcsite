@@ -50,7 +50,7 @@ const StoryGallery = () => {
               const slug = slugify(title, { lower: true })
               return (
                 <>
-                  <StoryGalleryItem>
+                  <StoryGalleryItem style={{paddingTop: "10px", paddingLeft: "15px", paddingRight: "15px"}}>
                     <Link
                       key={id}
                       to={`/${slug}`}

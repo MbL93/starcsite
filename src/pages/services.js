@@ -4,7 +4,7 @@ import { Headline } from "../styles/Typography"
 
 const Services = () => {
   return (
-    <Page headerIsVisible={true}>
+    <Page headerIsVisible={true} visibleNavbar={true}>
       <Headline>Hi from Services!</Headline>
     </Page>
   )

@@ -15,7 +15,7 @@ const settings = {
   slidesToShow: 1,
   slidesToScroll: 1,
 }
-const ImageHeader = () => {
+const ImageHeader = ({ imageTitle}) => {
   return (
     <ImageHeaderDiv>
       <div
@@ -41,7 +41,7 @@ const ImageHeader = () => {
           position: "absolute",
           top: "0",
           left: "0",
-          ZIndex: "3",
+          ZIndex: "39",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -55,7 +55,7 @@ const ImageHeader = () => {
         {" "}
         <div style={{ textAlign: "center", color: "white" }}>
           <Headline>
-            Wir gestalten dir deine schönste Erinnerung - auf ewig!
+            {imageTitle}
           </Headline>
         </div>
       </div>

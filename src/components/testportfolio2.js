@@ -1,6 +1,8 @@
+
+import { graphql, useStaticQuery } from "gatsby"
 import Lightroom from "react-lightbox-gallery"
 import React from "react"
-const images = [
+const images2 = [
   {
     src: "https://images.unsplash.com/photo-1577279549270-b9e297533cdd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80",
     desc: "Person wearing shoes",
@@ -67,11 +69,30 @@ const settings = {
   mode: "dark",
 }
 const Testportfolio2 = () => {
+  const data = useStaticQuery(pageQuery)
+  const images = data.allContentfulGalleryImages.nodes.map(
+    ({ galleryImage }) => galleryImage
+  )
   return (
     <div>
-      <Lightroom images={images} settings={settings} />
+      <Lightroom images={images2} settings={settings} />
     </div>
   )
 }
-
+const pageQuery = graphql`
+  {
+    allContentfulGalleryImages(sort: { fields: date, order: DESC }) {
+      nodes {
+        galleryImage {
+          thumb: gatsbyImageData(
+            width: 1200
+            height: 1200
+            placeholder: BLURRED
+          )
+          full: gatsbyImageData(layout: FULL_WIDTH)
+        }
+      }
+    }
+  }
+`
 export default Testportfolio2

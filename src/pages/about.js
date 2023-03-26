@@ -3,7 +3,7 @@ import Page from "../components/Page"
 import { Headline } from "../styles/Typography"
 const About = () => {
   return (
-    <Page headerIsVisible={true}>
+    <Page headerIsVisible={true} visibleNavbar={true}>
       <Headline>Hi from About!</Headline>
     </Page>
   )
