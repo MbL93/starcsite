@@ -24,6 +24,9 @@ module.exports = {
         google: {
           families: ["Playfair Display", "Serif"],
         },
+        google: {
+          families: ["Caveat Brush", "Handwriting"]
+        },
       },
     },
     {

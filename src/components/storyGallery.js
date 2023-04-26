@@ -1,6 +1,6 @@
 import React from "react"
-import { StaticImage } from "gatsby-plugin-image"
-import { StyledButton } from "../styles/ButtonLayout"
+//import { StaticImage } from "gatsby-plugin-image"
+//import { StyledButton } from "../styles/ButtonLayout"
 import { Headline, Title, Subtitle } from "../styles/Typography"
 import { Divider } from "@mui/material"
 import { graphql } from "gatsby"
@@ -8,7 +8,7 @@ import { Link, useStaticQuery } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import {
   StoryGalleryContainer,
-  StoryGalleryImage,
+ // StoryGalleryImage,
   StoryGalleryItem,
 } from "../styles/StoryGalleryLayout"
 
@@ -58,13 +58,14 @@ const StoryGallery = () => {
                     >
                       <GatsbyImage
                         image={pathToImage}
+                        key={id}
                         alt={title}
                         style={{
                           overflow: "hidden",
                           height: "85%",
                         }}
                       />
-                      <h5 style={{ textAlign: "center" }}>{title}</h5>
+                      <h4 style={{ fontFamily:"Caveat Brush", textAlign: "center", marginTop: "10px", fontSize: "18px" }}>{title}</h4>
                     </Link>
                   </StoryGalleryItem>
                   {/* <StoryGalleryItem>

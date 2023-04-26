@@ -7,15 +7,15 @@ import Seo from "./Seo"
 import ImageHeader from "./ImageHeader"
 import useIsInViewport from "../hooks/useIsInViewport"
 import { Container } from "../styles/PageLayout"
-import { ImageHeaderWrapper } from "../styles/ImageHeaderLayout"
+//import { ImageHeaderWrapper } from "../styles/ImageHeaderLayout"
 import {
-  Link,
-  Button,
+  //Link,
+  //Button,
   Element,
-  Events,
+  //Events,
   animateScroll as scroll,
-  scrollSpy,
-  scroller,
+  //scrollSpy,
+  //scroller,
 } from "react-scroll"
 
 function executeScroll() {
