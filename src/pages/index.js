@@ -1,13 +1,13 @@
 import React from "react"
 import Page from "../components/Page"
-import Introduction from "../components/Introduction"
+import IntroductionAll from "../components/Introduction"
 import StoryGallery from "../components/storyGallery"
 
 const Home = () => {
   return (
     <>
-      <Page headerIsVisible={true} visibleNavbar={true}>
-        <Introduction />
+      <Page imageHeaderSource={"source"} headerIsVisible={true} visibleNavbar={true}>
+        <IntroductionAll />
         <StoryGallery />
       </Page>
     </>

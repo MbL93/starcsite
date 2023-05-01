@@ -22,7 +22,7 @@ function executeScroll() {
   scroll.scrollMore(100)
 }
 
-const Page = ({ children, headerIsVisible, visibleNavbar }) => {
+const Page = ({ children, imageHeaderSource, headerIsVisible, visibleNavbar }) => {
   const imageHeaderRef = useRef(null)
   const containerStartRef = useRef(null)
 

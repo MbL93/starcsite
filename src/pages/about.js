@@ -1,11 +1,13 @@
 import React from "react"
 import Page from "../components/Page"
-import { Headline } from "../styles/Typography"
+import {IntroductionAll, IntroductionMarc, IntroductionStefan} from "../components/Introduction"
 const About = () => {
   return (
-    <Page headerIsVisible={true} visibleNavbar={true}>
-      <Headline>Hi from About!</Headline>
-    </Page>
+    <Page  imageHeaderSource={"source"} headerIsVisible={true} visibleNavbar={true}>
+    <IntroductionAll />
+    <IntroductionMarc />
+    <IntroductionStefan />
+  </Page>
   )
 }
 

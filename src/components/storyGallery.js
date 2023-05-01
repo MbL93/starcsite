@@ -65,7 +65,7 @@ const StoryGallery = () => {
                           height: "85%",
                         }}
                       />
-                      <h4 style={{ fontFamily:"Caveat Brush", textAlign: "center", marginTop: "10px", fontSize: "18px" }}>{title}</h4>
+                      <h4 style={{ fontFamily:"Caveat Brush", textAlign: "center", marginTop: "10px", fontSize: "16px" }}>{title}</h4>
                     </Link>
                   </StoryGalleryItem>
                   {/* <StoryGalleryItem>
