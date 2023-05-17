@@ -8,7 +8,6 @@ const Portfolio3 = () => {
   return (
     <Page>
       <Testportfolio2 />
-      <Testportfolio3 />
     </Page>
   )
 }

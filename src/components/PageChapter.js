@@ -2,10 +2,19 @@ import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { Headline, Title, Subtitle, Paragraph } from "../styles/Typography"
 import { Divider } from "@mui/material"
-export function PageChapter({ headline, subTitle, subSubTitle, subSubSubTitle, paragraph, subParagraph, imagePath, imagePosition, alt}) {
+export function PageChapter({
+  headline,
+  subTitle,
+  subSubTitle,
+  subSubSubTitle,
+  paragraph,
+  subParagraph,
+  imagePath,
+  imagePosition,
+  alt,
+}) {
   const imagePaths = imagePath
   return (
-    
     <div
       style={{
         display: "flex",
@@ -15,11 +24,10 @@ export function PageChapter({ headline, subTitle, subSubTitle, subSubSubTitle, p
         marginBottom: "140px",
       }}
     >
-      
       <div style={{ width: "100%" }}>
         <Divider></Divider>
       </div>
-      <div style={{ padding: "60px", "paddingTop": "19px" }}>
+      <div style={{ padding: "60px", paddingTop: "19px" }}>
         <Headline>{headline}</Headline>
         <Divider></Divider>
       </div>
@@ -31,114 +39,109 @@ export function PageChapter({ headline, subTitle, subSubTitle, subSubSubTitle, p
           justifyContent: "space-between",
         }}
       >
-        {imagePosition==='left' ? (
+        {imagePosition === "left" ? (
           <>
-        <div id="item1" style={{ flex: "0 0 48%", alignSelf: "flexStart" }}>
-          <StaticImage
-            src='../assets/images/stefan.jpg'
-            alt={alt}
-            placeholder="tracedSVG"
-            layout="constrained"
-            as="div"
-          />
-        </div>
-        <div
-          id="item2"
-          style={{
-            flex: "0 0 48%",
-          }}
-        >
-          <div
-            style={{
-              marginBottom: "5px",
-              textAlign: "center",
-            }}
-          >
-            <Title>{subTitle}</Title>
-          </div>
-          <div
-            style={{
-              marginBottom: "30px",
-              textAlign: "center",
-            }}
-          >
-            <Subtitle>
-              {subSubTitle}
-              <Divider> {subSubSubTitle}</Divider>
-            </Subtitle>
-          </div>
-          <div
-            style={{
-              marginBottom: "30px",
-            }}
-          >
-            <Paragraph>
-              {paragraph}
-            </Paragraph>
-          </div>
-          <div
-            style={{
-              textAlign: "center",
-            }}
-          >
-            {subParagraph}
-          </div>
-        </div>
-        </>
+            <div id="item1" style={{ flex: "0 0 48%", alignSelf: "flexStart" }}>
+              <StaticImage
+                src="../assets/images/stefan.jpg"
+                alt={alt}
+                placeholder="tracedSVG"
+                layout="constrained"
+                as="div"
+              />
+            </div>
+            <div
+              id="item2"
+              style={{
+                flex: "0 0 48%",
+              }}
+            >
+              <div
+                style={{
+                  marginBottom: "5px",
+                  textAlign: "center",
+                }}
+              >
+                <Title>{subTitle}</Title>
+              </div>
+              <div
+                style={{
+                  marginBottom: "30px",
+                  textAlign: "center",
+                }}
+              >
+                <Subtitle>
+                  {subSubTitle}
+                  <Divider> {subSubSubTitle}</Divider>
+                </Subtitle>
+              </div>
+              <div
+                style={{
+                  marginBottom: "30px",
+                }}
+              >
+                <Paragraph>{paragraph}</Paragraph>
+              </div>
+              <div
+                style={{
+                  textAlign: "center",
+                }}
+              >
+                {subParagraph}
+              </div>
+            </div>
+          </>
         ) : (
           <>
-         
-          <div
-            id="item2"
-            style={{
-              flex: "0 0 48%",
-            }}
-          >
             <div
+              id="item2"
               style={{
-                marginBottom: "5px",
-                textAlign: "center",
+                flex: "0 0 48%",
               }}
             >
-              <Title>{subTitle}</Title>
+              <div
+                style={{
+                  marginBottom: "5px",
+                  textAlign: "center",
+                }}
+              >
+                <Title>{subTitle}</Title>
+              </div>
+              <div
+                style={{
+                  marginBottom: "30px",
+                  textAlign: "center",
+                }}
+              >
+                <Subtitle>
+                  {subSubTitle}
+                  <Divider> {subSubSubTitle}</Divider>
+                </Subtitle>
+              </div>
+              <div
+                style={{
+                  marginBottom: "30px",
+                }}
+              >
+                <Paragraph>{paragraph}</Paragraph>
+              </div>
+              <div
+                style={{
+                  textAlign: "center",
+                }}
+              >
+                {subParagraph}
+              </div>
             </div>
-            <div
-              style={{
-                marginBottom: "30px",
-                textAlign: "center",
-              }}
-            >
-              <Subtitle>
-                {subSubTitle}
-                <Divider> {subSubSubTitle}</Divider>
-              </Subtitle>
+            <div id="item1" style={{ flex: "0 0 48%", alignSelf: "flexStart" }}>
+              <StaticImage
+                src="../assets/images/marc.jpg"
+                alt={alt}
+                placeholder="tracedSVG"
+                layout="constrained"
+                as="div"
+              />
             </div>
-            <div
-              style={{
-                marginBottom: "30px",
-              }}
-            >
-              <Paragraph>
-                {paragraph}
-              </Paragraph>
-            </div>
-            <div
-              style={{
-                textAlign: "center",
-              }}
-            >
-              {subParagraph}
-            </div>
-          </div>
-          <div id="item1" style={{ flex: "0 0 48%", alignSelf: "flexStart" }}>
-          <StaticImage
-            src='../assets/images/marc.jpg'
-            alt={alt}
-            placeholder="tracedSVG"
-            layout="constrained"
-            as="div"
-          />
-          </div>
           </>
         )}
       </div>
