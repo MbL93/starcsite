@@ -8,13 +8,14 @@ const GalleryComp = () => {
   const images = data.allContentfulGalleryImages.nodes.map(
     ({ galleryImage }) => galleryImage
   )
-  console.log(images)
+
   // `images` is an array of objects with `thumb` and `full`
   return (
     <GalleryContainer>
       <Gallery
         images={images}
         colWidth={33}
+        mdColWidth={33}
         rowMargin={33}
         title="Schmandalo"
       />
