@@ -22,7 +22,12 @@ function executeScroll() {
   scroll.scrollMore(100)
 }
 
-const Page = ({ children, imageHeaderSource, headerIsVisible, visibleNavbar }) => {
+const Page = ({
+  children,
+  imageHeaderSource,
+  headerIsVisible,
+  visibleNavbar,
+}) => {
   const imageHeaderRef = useRef(null)
   const containerStartRef = useRef(null)
 
@@ -30,28 +35,27 @@ const Page = ({ children, imageHeaderSource, headerIsVisible, visibleNavbar }) =
   // containerStartRef.current.scrollIntoView()
   // if (visibleHeader){
   //   const isInViewport1 = useIsInViewport(imageHeaderRef)
-    
+
   // if(visibleNavbar){
   //   const navbarIsVisible = !isInViewport1
   // }
-  
+
   const navbarIsVisible = !isInViewport1
-  console.log(headerIsVisible)
   return (
     <>
       <Seo />
       <GlobalStyles />
-      
-      {visibleNavbar ? (
-        <Header navbarIsVisible={navbarIsVisible} />
-      ) : (
-        null
-      )}
-      
+
+      {visibleNavbar ? <Header navbarIsVisible={navbarIsVisible} /> : null}
+
       <PageLayout>
         {headerIsVisible ? (
           <div ref={imageHeaderRef} onWheel={executeScroll}>
-            <ImageHeader imageTitle={"Wir gestalten dir deine schönste Erinnerung - auf ewig!"}/>
+            <ImageHeader
+              imageTitle={
+                "Wir gestalten dir deine schönste Erinnerung - auf ewig!"
+              }
+            />
           </div>
         ) : (
           <div

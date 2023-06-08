@@ -1,7 +1,7 @@
-
 import { graphql, useStaticQuery } from "gatsby"
 import Lightroom from "react-lightbox-gallery"
 import React from "react"
+
 const images2 = [
   {
     src: "https://images.unsplash.com/photo-1577279549270-b9e297533cdd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80",
@@ -71,11 +71,16 @@ const settings = {
 const Testportfolio2 = () => {
   const data = useStaticQuery(pageQuery)
   const images = data.allContentfulGalleryImages.nodes.map(
-    ({ galleryImage }) => galleryImage
+    ({ galleryImage }) => {
+      console.log(galleryImage.full.images.fallback.src)
+      return {
+        src: galleryImage.full.images.fallback.src,
+      }
+    }
   )
   return (
     <div>
-      <Lightroom images={images2} settings={settings} />
+      <Lightroom images={images} settings={settings} />
     </div>
   )
 }

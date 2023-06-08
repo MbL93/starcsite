@@ -12,6 +12,11 @@ import {
   StyledLink,
   ContentDiv,
   StyledA,
+  DropdownContent,
+  DropdownMenu,
+  DropdownLink,
+  DropdownButton,
+  DropdownMenu2,
 } from "../styles/HeaderLayout"
 
 const Header = ({ navbarIsVisible }) => {
@@ -34,7 +39,14 @@ const Header = ({ navbarIsVisible }) => {
             </LogoDiv>
             <LinkDiv>
               <StyledLink to="/">Home</StyledLink>
-              <StyledLink to="/about">Über uns</StyledLink>
+              <DropdownMenu>
+                <DropdownButton>Über uns</DropdownButton>
+                <DropdownContent>
+                  <DropdownLink to="/about">Wir</DropdownLink>
+                  <DropdownLink to="/marc">Marc</DropdownLink>
+                  <DropdownLink to="/stefan">Stefan</DropdownLink>
+                </DropdownContent>
+              </DropdownMenu>
               <StyledLink to="/stories">Geschichten</StyledLink>
               <StyledLink to="/portfolio">Portfolio</StyledLink>
               <StyledLink to="/services">Leistungen</StyledLink>
@@ -47,7 +59,7 @@ const Header = ({ navbarIsVisible }) => {
         </HeaderDiv>
       </StyledHeader>
     )
-  } 
+  }
 }
 
 export default Header
