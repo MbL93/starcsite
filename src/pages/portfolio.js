@@ -10,7 +10,7 @@ const Portfolio = () => {
       headerIsVisible={false}
       visibleNavbar={true}
     >
-      <Headline>Hi from Portfolio!</Headline>
+      // // {/* <Headline>Hi from Portfolio!</Headline> */}
       <GalleryComp />
     </Page>
   )

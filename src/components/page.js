@@ -4,7 +4,7 @@ import GlobalStyles from "../styles/GlobalStyles"
 import Header from "./header"
 import Footer from "./footer"
 import Seo from "./Seo"
-import ImageHeader from "./ImageHeader"
+//import ImageHeader from "./ImageHeader"
 import useIsInViewport from "../hooks/useIsInViewport"
 import { Container } from "../styles/PageLayout"
 //import { ImageHeaderWrapper } from "../styles/ImageHeaderLayout"
@@ -31,7 +31,7 @@ const Page = ({
   const imageHeaderRef = useRef(null)
   const containerStartRef = useRef(null)
 
-  const isInViewport1 = useIsInViewport(imageHeaderRef)
+  //const isInViewport1 = useIsInViewport(imageHeaderRef)
   // containerStartRef.current.scrollIntoView()
   // if (visibleHeader){
   //   const isInViewport1 = useIsInViewport(imageHeaderRef)
@@ -40,7 +40,9 @@ const Page = ({
   //   const navbarIsVisible = !isInViewport1
   // }
 
-  const navbarIsVisible = !isInViewport1
+  //const navbarIsVisible = !isInViewport1
+
+  const navbarIsVisible = true
   return (
     <>
       <Seo />
@@ -49,7 +51,7 @@ const Page = ({
       {visibleNavbar ? <Header navbarIsVisible={navbarIsVisible} /> : null}
 
       <PageLayout>
-        {headerIsVisible ? (
+        {/* {headerIsVisible ? (
           <div ref={imageHeaderRef} onWheel={executeScroll}>
             <ImageHeader
               imageTitle={
@@ -65,7 +67,7 @@ const Page = ({
           >
             <ImageHeader />
           </div>
-        )}
+        )} */}
         <Element id="myScrollToElement" name="myScrollToElement">
           <Container
             column

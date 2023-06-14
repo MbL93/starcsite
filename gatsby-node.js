@@ -20,3 +20,21 @@ exports.onCreatePage = async ({ page, actions }) => {
     createPage(page)
   }
 }
+exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+  if (stage === "build-html") {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /react-image-lightbox/,
+            use: loaders.null(),
+          },
+          {
+            test: /react-lightbox-gallery/,
+            use: loaders.null(),
+          },
+        ],
+      },
+    })
+  }
+}

@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 import Gallery from "@browniebroke/gatsby-image-gallery"
-import { GalleryContainer } from "../styles/GalleryLayout"
+//import { GalleryContainer } from "../styles/GalleryLayout"
 
 const GalleryComp = () => {
   const data = useStaticQuery(pageQuery)
@@ -11,7 +11,7 @@ const GalleryComp = () => {
 
   // `images` is an array of objects with `thumb` and `full`
   return (
-    <GalleryContainer>
+    <div>
       <Gallery
         images={images}
         colWidth={33}
@@ -19,7 +19,7 @@ const GalleryComp = () => {
         rowMargin={33}
         title="Schmandalo"
       />
-    </GalleryContainer>
+    </div>
   )
 }
 
