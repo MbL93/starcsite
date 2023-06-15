@@ -34,10 +34,8 @@ const Marc = () => {
 // `
 
 export const marcStoryTypeQuery = graphql`
-  query marcStoryTypeQuery($storyType: String!) {
-    allContentfulStory(
-      filter: { author: { eq: "marc" }, type: { eq: $storyType } }
-    ) {
+  {
+    allContentfulStory(filter: { author: { eq: "marc" } }) {
       nodes {
         id
         leadimage {
