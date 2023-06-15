@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgatsby_starter_hello_world=self.webpackChunkgatsby_starter_hello_world||[]).push([[704],{7243:function(e,a,r){r.r(a);var l=r(7294),t=r(8951);a.default=()=>l.createElement(t.Z,{imageHeaderSource:"source",headerIsVisible:!1,visibleNavbar:!0},l.createElement("h3",null,"I am Stefan!"))}}]);
+//# sourceMappingURL=component---src-pages-stefan-js-54a6c785d03f8f570844.js.map
