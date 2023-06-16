@@ -9,6 +9,8 @@ require("dotenv").config({
 })
 module.exports = {
   /* Your site config here */
+
+  pathPrefix: "/starcsite",
   siteMetadata: {
     title: config.siteTitle,
   },
@@ -25,7 +27,7 @@ module.exports = {
           families: ["Playfair Display", "Serif"],
         },
         google: {
-          families: ["Caveat Brush", "Handwriting"]
+          families: ["Caveat Brush", "Handwriting"],
         },
       },
     },

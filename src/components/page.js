@@ -5,7 +5,7 @@ import Header from "./header"
 import Footer from "./footer"
 import Seo from "./Seo"
 import ImageHeader from "./ImageHeader"
-import useIsInViewport from "../hooks/useIsInViewport"
+//import useIsInViewport from "../hooks/useIsInViewport"
 import { Container } from "../styles/PageLayout"
 //import { ImageHeaderWrapper } from "../styles/ImageHeaderLayout"
 import {
@@ -28,10 +28,10 @@ const Page = ({
   headerIsVisible,
   visibleNavbar,
 }) => {
-  const imageHeaderRef = useRef(null)
-  const containerStartRef = useRef(null)
+  // const imageHeaderRef = useRef(null)
+  // const containerStartRef = useRef(null)
 
-  const isInViewport1 = useIsInViewport(imageHeaderRef)
+  // const isInViewport1 = useIsInViewport(imageHeaderRef)
   // containerStartRef.current.scrollIntoView()
   // if (visibleHeader){
   //   const isInViewport1 = useIsInViewport(imageHeaderRef)
@@ -40,7 +40,8 @@ const Page = ({
   //   const navbarIsVisible = !isInViewport1
   // }
 
-  const navbarIsVisible = !isInViewport1
+  const navbarIsVisible = true
+  //!isInViewport1
   return (
     <>
       <Seo />
@@ -50,28 +51,20 @@ const Page = ({
 
       <PageLayout>
         {headerIsVisible ? (
-          <div ref={imageHeaderRef} onWheel={executeScroll}>
-            <ImageHeader
-              imageTitle={
-                "Wir gestalten dir deine schönste Erinnerung - auf ewig!"
-              }
-            />
-          </div>
+          //<div ref={imageHeaderRef} onWheel={executeScroll}>
+          <ImageHeader
+            imageTitle={
+              "Wir gestalten dir deine schönste Erinnerung - auf ewig!"
+            }
+          />
         ) : (
-          <div
-            style={{ display: "none" }}
-            ref={imageHeaderRef}
-            onWheel={executeScroll}
-          >
+          //</div>
+          <div style={{ display: "none" }} onWheel={executeScroll}>
             <ImageHeader />
           </div>
         )}
         <Element id="myScrollToElement" name="myScrollToElement">
-          <Container
-            column
-            justifyContent="space-between"
-            ref={containerStartRef}
-          >
+          <Container column justifyContent="space-between">
             {children}
           </Container>
         </Element>
